@@ -7,23 +7,25 @@
 
 import SwiftUI
 
+enum Tab {
+	case home, goals, settings
+}
+
+enum HomeNavigation: Hashable {
+	case child, secondChild(Person)
+}
+
 struct TabScreenView: View {
+	
 	@State private var selectedTab: Tab = .home
 	
-	enum Tab {
-		case home, goals, settings
-	}
-	
-	enum HomeNavigation {
-		case child, secondChild
-	}
 	@State private var homeNavigationStack: [HomeNavigation] = []
 	//likewise you declare navigationStacks for each of the tabs
 	var body: some View {
 		
 		TabView(selection: tabSelection()) {
 			
-			HomeScreen()
+			HomeScreen(path: $homeNavigationStack)
 				.tabItem {
 					Label("Home", systemImage: "house")
 				}
@@ -52,6 +54,11 @@ extension TabScreenView {
 		} set: { tappedTab in
 			if tappedTab == self.selectedTab {
 				//User tapped on the tab twice == Pop to root view
+				if homeNavigationStack.isEmpty {
+					//User already on home view, scroll to top
+				} else {
+					homeNavigationStack = []
+				}
 			}
 			//Set the tab to the tabbed tab
 			self.selectedTab = tappedTab

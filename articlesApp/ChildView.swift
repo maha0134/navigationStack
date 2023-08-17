@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ChildView: View {
-    var body: some View {
-        Text("Child View")
-		NavigationLink {
-			SecondChildView()
-		} label: {
-			Text("Click to enter second view")
+	let person = Person(name: "Akshay", lastName: "Mahajan")
+	var body: some View {
+		VStack {
+			Text("Child View")
+			
+			NavigationLink(value: HomeNavigation.secondChild(person)) {
+				Text("Click to enter second view")
+			}
 		}
-		.navigationTitle("ChildView")
-    }
+		.navigationTitle("Child")
+	}
 }
 
 struct ChildView_Previews: PreviewProvider {
-    static var previews: some View {
-		ChildView()
-    }
+	static var previews: some View {
+		NavigationStack {
+			ChildView()
+		}
+	}
 }

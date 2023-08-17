@@ -16,6 +16,7 @@
 		4AD5848B2A8B5D92003E24BA /* GoalsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5848A2A8B5D92003E24BA /* GoalsScreen.swift */; };
 		4AD5848D2A8B5D9C003E24BA /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5848C2A8B5D9C003E24BA /* SettingsScreen.swift */; };
 		4AD5849B2A8DDB15003E24BA /* SecondChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5849A2A8DDB15003E24BA /* SecondChildView.swift */; };
+		4AEFF9A12A8DEB6E00D2D8D9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFF9A02A8DEB6E00D2D8D9 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4AD5848A2A8B5D92003E24BA /* GoalsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsScreen.swift; sourceTree = "<group>"; };
 		4AD5848C2A8B5D9C003E24BA /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		4AD5849A2A8DDB15003E24BA /* SecondChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildView.swift; sourceTree = "<group>"; };
+		4AEFF9A02A8DEB6E00D2D8D9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4AD5848A2A8B5D92003E24BA /* GoalsScreen.swift */,
 				4AD5848C2A8B5D9C003E24BA /* SettingsScreen.swift */,
 				4AD5849A2A8DDB15003E24BA /* SecondChildView.swift */,
+				4AEFF9A02A8DEB6E00D2D8D9 /* Person.swift */,
 			);
 			path = articlesApp;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				4AD5847B2A8B56CB003E24BA /* HomeScreen.swift in Sources */,
 				4AD584792A8B56CB003E24BA /* articlesAppApp.swift in Sources */,
 				4AD5848D2A8B5D9C003E24BA /* SettingsScreen.swift in Sources */,
+				4AEFF9A12A8DEB6E00D2D8D9 /* Person.swift in Sources */,
 				4AD584872A8B57BC003E24BA /* ChildView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

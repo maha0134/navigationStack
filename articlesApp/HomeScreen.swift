@@ -8,29 +8,30 @@
 import SwiftUI
 
 struct HomeScreen: View {
-	@State var path = NavigationPath()
+	@Binding var path: [HomeNavigation]
+	
 	var body: some View {
-			
-			NavigationStack(path: $path) {
-				NavigationLink(value: 1) {
-					Text("Click me to navigate")
-				}
-				
-				.navigationDestination(for: Int.self) { value in
-					if value == 1 {
-						ChildView()
-					}
-				}
+		
+		NavigationStack(path: $path) {
+			NavigationLink(value: HomeNavigation.child) {
+				Text("Click me to navigate")
 			}
 			
-			
-			
+			.navigationDestination(for: HomeNavigation.self) { screen in
+				switch screen {
+					case .child: ChildView()
+					case .secondChild(let person): SecondChildView(person: person)
+				}
+			}
+			.navigationTitle("Home")
+		}
+		
 		.padding()
 	}
 }
 
 struct HomeScreen_Previews: PreviewProvider {
 	static var previews: some View {
-		HomeScreen()
+		HomeScreen(path: .constant([HomeNavigation]()))
 	}
 }

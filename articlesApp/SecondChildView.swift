@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct SecondChildView: View {
-    var body: some View {
+	let person: Person
+	var body: some View {
 		VStack(spacing: 10) {
-        	Text("Welcome to")
+			Text("Welcome \(person.name) \(person.lastName) to")
 			Text("Second child view")
 				.fontWeight(.bold)
 			Text("of the Home View")
-        }
-			.navigationTitle("Second Child View")
-    }
+		}
+		.navigationTitle("Second Child")
+	}
 }
 
 struct SecondChildView_Previews: PreviewProvider {
-    static var previews: some View {
-        SecondChildView()
-    }
+	static var previews: some View {
+		let person = Person(name: "Akshay", lastName: "Test")
+		SecondChildView(person: person)
+	}
 }
