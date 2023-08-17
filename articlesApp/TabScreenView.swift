@@ -29,19 +29,19 @@ struct TabScreenView: View {
 				.tabItem {
 					Label("Home", systemImage: "house")
 				}
-				.tag("Home")
+				.tag(Tab.home)
 			
 			GoalsScreen()
 				.tabItem {
 					Label("Goals", systemImage: "flag")
 				}
-				.tag("Goals")
+				.tag(Tab.goals)
 			
 			SettingsScreen()
 				.tabItem {
 					Label("Settings", systemImage: "gear")
 				}
-				.tag("Settings")
+				.tag(Tab.settings)
 		}
 	}
 }
