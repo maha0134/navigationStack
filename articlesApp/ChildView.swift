@@ -10,6 +10,12 @@ import SwiftUI
 struct ChildView: View {
     var body: some View {
         Text("Child View")
+		NavigationLink {
+			SecondChildView()
+		} label: {
+			Text("Click to enter second view")
+		}
+		.navigationTitle("ChildView")
     }
 }
 
